@@ -1,8 +1,8 @@
 Basics
-  * [Installation](https://raw.githubusercontent.com/ivyjs/docs/master/installation.md)
-  * [Configuration](https://raw.githubusercontent.com/ivyjs/docs/master/config.md)
-  * [Services](https://raw.githubusercontent.com/ivyjs/docs/master/Services.md)
+  * [Installation](http://localhost:4200/docs/installation)
+  * [Configuration](http://localhost:4200/docs/config)
+  * [Services](http://localhost:4200/docs/Services)
 
 Routing
-   * [Routes](https://raw.githubusercontent.com/ivyjs/docs/master/Routing.md)
-   * [Middleware](https://raw.githubusercontent.com/ivyjs/docs/master/middleware.md)
+   * [Routes](http://localhost:4200/docs/Routing)
+   * [Middleware](http://localhost:4200/docs/middleware)
