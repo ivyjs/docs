@@ -63,3 +63,8 @@ Route.get('/home', function() {
   return "this goes through multiple middleware";
 }, { middleware: ['auth', 'www'] });
 ```
+
+# Route list
+
+To view the list of all routes, ivy comes with the cli helper.
+Run the command `node ivy route:list` in the root of your project, and it will print out the list of routes.
