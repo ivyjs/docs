@@ -1,6 +1,6 @@
 Basics
-  * [Installation](http://localhost:4200/docs/installation)
-  * [Configuration](http://localhost:4200/docs/config)
+  * [Installation](#/docs/installation)
+  * [Configuration](#/docs/config)
   * [Services](http://localhost:4200/docs/Services)
 
 Routing
