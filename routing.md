@@ -68,3 +68,17 @@ Route.get('/home', function() {
 
 To view the list of all routes, ivy comes with the cli helper.
 Run the command `node ivy route:list` in the root of your project, and it will print out the list of routes.
+
+# Object response
+
+Nodejs works with json very well, thats a well known fact, but you can't send raw json object as the response, cause only string is applicable. Ivy solves this issue by casting object to string, and returns the respose of `application/json` type.
+
+```
+Router.get('/json', function() {
+  return {
+   "good": "testing",
+   "is": "here"
+   });
+```
+
+will actually work here!
