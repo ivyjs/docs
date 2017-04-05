@@ -39,6 +39,14 @@ Route.delete('/user', function(parameter) {
 });
 ```
 
+## Binding to the controller
+
+In order to make things more clear, the concept of the controller is introduced. To forward your route request to the controller, make the 2nd argument of route in form of `{ControllerName}@{methodToTrigger}`.
+
+```
+Route.get('/users', 'UserController@index');
+```
+
 
 # Options
 
