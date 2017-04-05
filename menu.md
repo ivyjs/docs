@@ -7,3 +7,4 @@ Basics
 Routing
    * [Routes](/docs/routing)
    * [Middleware](/docs/middleware)
+   * [Controllers](/docs/controller)
