@@ -90,3 +90,19 @@ Router.get('/json', function() {
 ```
 
 will actually work here!
+
+# Route parameters
+
+To understand better how are we dealig with the parameters, lets see the example:
+
+```
+Route.get('/user/:id/:action', 'UserController@actionHandler');
+```
+
+Now that our route is defined, lets see the `actionHandler` in the `UserController`:
+
+```
+actionHandler(request) {
+  console.log(request); // { "id": 3, "action": "create" }
+}
+```
