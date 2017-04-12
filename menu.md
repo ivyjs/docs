@@ -8,3 +8,4 @@ Routing
    * [Routes](/docs/routing)
    * [Middleware](/docs/middleware)
    * [Controllers](/docs/controller)
+   * [Body parser](/docs/body-parser)
