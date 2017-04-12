@@ -93,7 +93,7 @@ will actually work here!
 
 # Route parameters
 
-To understand better how are we dealig with the parameters, lets see the example:
+To understand better how are we dealing with the parameters, lets see the example:
 
 ```
 Route.get('/user/:id/:action', 'UserController@actionHandler');
