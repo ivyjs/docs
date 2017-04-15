@@ -106,3 +106,23 @@ actionHandler(request) {
   console.log(request); // { "id": 3, "action": "create" }
 }
 ```
+
+# Resources
+
+We already saw that [controller](/docs/controller) can be created as a resource right away, but what about routes? That also works!
+
+```
+Route.resource('user', 'UserController');
+```
+
+function `resource(resourceName, resourceHandlerController, resourceOptions)` will create all relative REST routes for a given resource. By triggering command `node ivy route:list` we will see the list of them:
+
+```
+Method Route                    Handler               
+------------------------------------------------------
+GET    user                     UserController@index
+GET    user/:id                 UserController@show
+POST   user                     UserController@create
+PUT    user/:id                 UserController@update
+DELETE user/:id                 UserController@remove
+```
