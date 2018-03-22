@@ -43,6 +43,14 @@ Route.get('/users', 'UserController@index');
 
 Right now, after we hit the route `/users` we will get the json response containing the values returned from the controller's method `index()`.
 
+Making your request use Async/Await is as simple as adding `async` to the handler function.
+
+```
+async index() {
+    return await fetchUserData();
+  }
+```
+
 
 ## Resource
 
