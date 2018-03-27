@@ -4,6 +4,6 @@
   "plugins": [
     "prism-ext",
     "-highlight",
-    "theme-bandwidth"
+    "gitbook-plugin-theme-appcom"
   ]
 }
