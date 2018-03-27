@@ -8,10 +8,4 @@
     "-theme-default",
     "styles-sass-fix"
   ],
-  "pluginsConfig": {
-    "theme-gestalt": {
-        "excludeDefaultStyles": true,
-        "doNotHideChildrenChapters" : false
-    }
-}
 }
