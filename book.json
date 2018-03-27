@@ -4,5 +4,12 @@
   "plugins": [
     "prism-ext",
     "-highlight"
-  ]
+  ],
+  "pluginsConfig": {
+    "prism": {
+      "lang": {
+        "flow": "javascript"
+      }
+    }
+  }
 }
