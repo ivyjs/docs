@@ -1,26 +1,26 @@
 # Summary
 
-* **Basics**
+**Basics**
 
-  * [Installation](README.md)
+* [Installation](README.md)
 
-  * [Configuration](config.md)
+* [Configuration](config.md)
 
-  * [Services](services.md)
+* [Services](services.md)
 
-  * [Commander](commander.md)
+* [Commander](commander.md)
 
 ---
 
-* **Routing**
+**Routing**
 
-  * [Routes](routing.md)
+* [Routes](routing.md)
 
-  * [Middleware](middleware.md)
+* [Middleware](middleware.md)
 
-  * [Controllers](controller.md)
+* [Controllers](controller.md)
 
-  * [Body Parser](body-parser.md)
+* [Body Parser](body-parser.md)
 
 
 
