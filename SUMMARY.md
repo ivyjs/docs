@@ -1,6 +1,6 @@
 # Summary
 
-* [Installation](installation.md)
+* [Installation](README.md)
 * [Configuration](config.md)
 * [Services](services.md)
 * [Commander](commander.md)
@@ -8,5 +8,4 @@
 * [Middleware](middleware.md)
 * [Controllers](controller.md)
 * [Body Parser](body-parser.md)
-* [Menu](README.md)
 
