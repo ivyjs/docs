@@ -3,7 +3,6 @@
   "author": "Aleksa Stankovic",
   "plugins": [
     "prism-ext",
-    "-highlight",
-    "theme-gestalt"
+    "-highlight"
   ]
 }
