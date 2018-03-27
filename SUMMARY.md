@@ -1,6 +1,5 @@
 # Summary
 
-* [Menu](README.md)
 * [Installation](installation.md)
 * [Configuration](config.md)
 * [Services](services.md)
@@ -9,4 +8,5 @@
 * [Middleware](middleware.md)
 * [Controllers](controller.md)
 * [Body Parser](body-parser.md)
+* [Menu](README.md)
 
