@@ -4,6 +4,6 @@
   "plugins": [
     "prism-ext",
     "-highlight",
-    "theme-brcm"
+    "theme-cornerstone"
   ]
 }
