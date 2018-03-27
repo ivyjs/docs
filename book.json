@@ -4,7 +4,6 @@
   "plugins": [
     "prism-ext",
     "-highlight",
-    "theme-gestalt",
-    "-theme-default"
+    "theme-gestalt"
   ]
 }
