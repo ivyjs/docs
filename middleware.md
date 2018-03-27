@@ -4,13 +4,13 @@ Middleware is located before your route request closure, so it provides a great 
 
 ## Creating middleware
 
-Creating a middleware can be done with a simple command `node ivy make:middleware {name}`, and it will automatically generate a middleware file with a desired name in the folder `/app/middleware`.
+Creating a middleware can be done with a simple command `node ivy make:middleware {name}`, and it will automatically generate a middleware file with a desired name in the folder `/app/middleware`.  
 After thats done, we should register it in the `config/middleware.js` with name and namespace.
 
-Lets say that we need a middleware `TestMiddleware`, first, we are going to create it with `node ivy make:middleware TestMiddleware`
+Lets say that we need a middleware `TestMiddleware`, first, we are going to create it with `node ivy make:middleware TestMiddleware`  
 and it will create file `app/middleware/TestMiddleware.js` for us.
 
-```
+```js
 bind('App/TestMiddleware', function () {
     return function (data, next) {
         next();
@@ -20,7 +20,7 @@ bind('App/TestMiddleware', function () {
 
 so, we've got the middleware, whats next? Lets register it under `config/middleware.js`.
 
-```
+```js
 module.exports = {
     /**
      * List of middleware in form of:
@@ -38,7 +38,7 @@ module.exports = {
 
 Assign it to the route by adding middleware option
 
-```
+```js
 Route.get('/home', function() {
   return "through the middleware!";
 }, { middleware: 'test' });
@@ -48,7 +48,7 @@ Route.get('/home', function() {
 
 Any error messages that are sent from the middleware, can be passed as an argument to the `next` function. After message parameter is added, the request does not go further, but returning the parameter sent using `next` to the client.
 
-```
+```js
 bind('App/ErrorMiddleware', function () {
     return function (data, next) {
         next("this is error message");
@@ -64,7 +64,7 @@ Sometimes you might require multiple middleware for a route, instead of writing 
 
 This can be done in the `config/middleware.js` file by adding a key:value in groups.
 
-```
+```js
 "groups": {
   ...
   "web-group": ['auth', 'token', 'another'],
@@ -73,3 +73,4 @@ This can be done in the `config/middleware.js` file by adding a key:value in gro
 ```
 
 now, our route can use `{ middleware: "web-group" }`. Also, make sure that you have previousely registered every middleware that is used in the group.
+

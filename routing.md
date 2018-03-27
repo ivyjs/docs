@@ -1,15 +1,14 @@
 # Routing
 
-Creating routes in the application can be done by editing `routes/routes.js` file. 
-`Route` object have methods to create routes which corresponds to the route method.
-First parameter is always the route path, second is the route closure, and third (optional) are the route options.
-Parameters are binding using the prefix `:`, and they are sent to the closure as the first argument.
+Creating routes in the application can be done by editing `routes/routes.js` file.   
+`Route` object have methods to create routes which corresponds to the route method.  
+First parameter is always the route path, second is the route closure, and third \(optional\) are the route options.  
+Parameters are binding using the prefix `:`, and they are sent to the closure as the first argument.  
 So by using `/:id`, and hitting the route `/3`, you will get parameter `{ id: 3 }` for example.
-
 
 ## GET
 
-```
+```js
 Route.get('/:id', function(parameter) {
   return parameter.id;
 });
@@ -17,7 +16,7 @@ Route.get('/:id', function(parameter) {
 
 ## POST
 
-```
+```js
 Route.post('/user', function(parameter) {
   return "This is user post method";
 });
@@ -25,7 +24,7 @@ Route.post('/user', function(parameter) {
 
 ## PUT
 
-```
+```js
 Route.put('/user', function(parameter) {
   return "This is user put method";
 });
@@ -33,7 +32,7 @@ Route.put('/user', function(parameter) {
 
 ## DELETE
 
-```
+```js
 Route.delete('/user', function(parameter) {
   return "This is user delete method";
 });
@@ -43,10 +42,9 @@ Route.delete('/user', function(parameter) {
 
 In order to make things more clear, the concept of the [controller](/docs/controller) is introduced. To forward your route request to the controller, make the 2nd argument of route in form of `{ControllerName}@{methodToTrigger}`.
 
-```
+```js
 Route.get('/users', 'UserController@index');
 ```
-
 
 # Options
 
@@ -56,7 +54,7 @@ Options are optional route parameter which sets additional parameters to the rou
 
 Middleware option can use either array of middleware or a single one.
 
-```
+```js
 Route.get('/home', function() {
   return "this goes through middleware";
 }, { middleware: 'auth' });
@@ -66,7 +64,7 @@ This request will go through the middleware auth before reaching route closure.
 
 You can specify multiple middleware as well.
 
-```
+```js
 Route.get('/home', function() {
   return "this goes through multiple middleware";
 }, { middleware: ['auth', 'www'] });
@@ -74,14 +72,14 @@ Route.get('/home', function() {
 
 # Route list
 
-To view the list of all routes, ivy comes with the cli helper.
+To view the list of all routes, ivy comes with the cli helper.  
 Run the command `node ivy route:list` in the root of your project, and it will print out the list of routes.
 
 # Object response
 
 Nodejs works with json very well, thats a well known fact, but you can't send raw json object as the response, cause only string is applicable. Ivy solves this issue by casting object to string, and returns the respose of `application/json` type.
 
-```
+```js
 Router.get('/json', function() {
   return {
    "good": "testing",
@@ -95,13 +93,13 @@ will actually work here!
 
 To understand better how are we dealing with the parameters, lets see the example:
 
-```
+```js
 Route.get('/user/:id/:action', 'UserController@actionHandler');
 ```
 
 Now that our route is defined, lets see the `actionHandler` in the `UserController`:
 
-```
+```js
 actionHandler(request) {
   console.log(request); // { "id": 3, "action": "create" }
 }
@@ -111,7 +109,7 @@ actionHandler(request) {
 
 We already saw that [controller](/docs/controller) can be created as a resource right away, but what about routes? That also works!
 
-```
+```js
 Route.resource('user', 'UserController');
 ```
 
@@ -126,3 +124,6 @@ POST   user                     UserController@create
 PUT    user/:id                 UserController@update
 DELETE user/:id                 UserController@remove
 ```
+
+
+
