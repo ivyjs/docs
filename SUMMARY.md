@@ -1,13 +1,13 @@
 # Summary
 
-Basics
+* Basics
 
 * [Installation](README.md)
 * [Configuration](config.md)
 * [Services](services.md)
 * [Commander](commander.md)
 
-Routing
+* Routing
 
 * [Routes](routing.md)
 * [Middleware](middleware.md)
