@@ -3,13 +3,7 @@
   "author": "Aleksa Stankovic",
   "plugins": [
     "prism-ext",
-    "-highlight"
+    "-highlight",
+    "theme-bandwidth"
   ],
-  "pluginsConfig": {
-    "prism": {
-      "lang": {
-        "flow": "javascript"
-      }
-    }
-  }
 }
