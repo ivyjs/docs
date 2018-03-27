@@ -1,0 +1,8 @@
+{
+  "description": "Official documentation of Ivy NodeJS framework.",
+  "author": "Aleksa Stankovic",
+  "plugins": [
+    "prism-ext",
+    "-highlight"
+  ]
+}
