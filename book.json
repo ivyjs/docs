@@ -4,6 +4,6 @@
   "plugins": [
     "prism-ext",
     "-highlight",
-    "gitbook-plugin-theme-appcom"
+    "theme-brcm"
   ]
 }
