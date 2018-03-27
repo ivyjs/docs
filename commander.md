@@ -1,6 +1,6 @@
 # Ivy's commander
 
-To help you out when it comes to developing your application, Ivy comes with user friendly command-line interface.
+To help you out when it comes to developing your application, Ivy comes with user friendly command-line interface.  
 Commander is accessable by running `node ivy` in root directory of your project.
 
 Help for each command is available with `--help` parameter, so `node ivy make:middleware --help` will display a help message of command, together with usage example and options.
@@ -9,7 +9,7 @@ Help for each command is available with `--help` parameter, so `node ivy make:mi
 
 Making commands for Ivy's commander is done using the 'Ivy/Commander' namespace.
 
-```
+```js
 let Commander = use('Ivy/Commander');
 
 Commander.register('my:command')
@@ -25,23 +25,24 @@ Commander.register('my:command')
          });
 ```
 
-### .register(command_name)
+### .register\(command\_name\)
 
 By passing command name to the register function, we are setting the name property of our brand new command.
 
-### .description(description_text)
+### .description\(description\_text\)
 
 Short description text, its displayed in the `help` menu of cli, as well as on `--help` menu of command.
 
-### .usage(example)
+### .usage\(example\)
 
 Provide an example usage of command.
 
-### .option(option_signature, callback, description_of_option)
+### .option\(option\_signature, callback, description\_of\_option\)
 
-Option signature stands for the string passed to the command. If we call our command as `my:command --red` function that is going to be executed prior the callback of command is the option callback function, which is supplied as the 2nd parameter.
+Option signature stands for the string passed to the command. If we call our command as `my:command --red` function that is going to be executed prior the callback of command is the option callback function, which is supplied as the 2nd parameter.  
 Description of option is displayed under help menu of command.
 
-### .execute(callback)
+### .execute\(callback\)
 
 Last and most important is the `execute` function, which has callback function as parameter. Callback function is going to be executed once command is triggered, and as parameter theres a command object passed through. Note that command object also has the `parameters` array, which consists of additionl parameters sent through the command.
+
